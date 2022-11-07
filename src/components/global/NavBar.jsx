@@ -22,7 +22,6 @@ const Nav = styled.div`
   gap: 30px;
   flex-direction: row;
   padding: 0.5rem;
-  height: 200px;
   padding: 40px;
   position: fixed;
   z-index: 999999;

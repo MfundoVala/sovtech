@@ -28,12 +28,12 @@ export const Content = styled.div`
 
   h1 {
     font-family: "Open Sans", sans-serif;
-    font-size: 4rem;
+    font-size: 2.5rem;
     font-weight: 700;
     letter-spacing: 0.02em;
     line-height: 1.1;
     margin: 0 0 1.5rem 0;
-    text-transform: none;
+    text-transform: uppercase;
 
     @media (max-width: 1024px) {
       font-size: 60px;
@@ -46,6 +46,7 @@ export const Content = styled.div`
   }
 
   .headerText {
+    margin-top: 10vh;
     @media (min-width: 600px) {
       /* padding-top: 250px; */
       /* text-align: right;
@@ -61,7 +62,7 @@ export const Content = styled.div`
     font-weight: bold;
     line-height: 150%;
     pointer-events: auto;
-    text-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    /* text-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); */
     /* padding-left: 100px; */
     @media (max-width: 800px) {
       width: 80vw;
