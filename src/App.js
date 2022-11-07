@@ -1,9 +1,8 @@
 import styled from "styled-components";
-import { useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import MyWork from "./views/MyWork";
 import Home from "./views/Home";
-import NavBar from "./components/NavBar";
+import NavBar from "./components/global/NavBar";
 
 const main = styled.div`
   display: flex;

@@ -11,9 +11,23 @@ export const Content = styled.div`
   margin-top: 10vh;
   height: 100vw;
   width: 40vw;
+  overflow-y: visible;
+  overflow-y: scroll;
+  height: 100vh;
+
+  .Logo {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  @media screen and (max-width: 768px) {
+    margin-top: 5vh;
+    width: 100vw;
+  }
 
   h1 {
-    font-family: "League Spartan";
+    font-family: "Open Sans", sans-serif;
     font-size: 4rem;
     font-weight: 700;
     letter-spacing: 0.02em;
@@ -31,33 +45,59 @@ export const Content = styled.div`
     }
   }
 
-  P {
-    font-family: "Source Sans Pro";
+  .headerText {
+    @media (min-width: 600px) {
+      /* padding-top: 250px; */
+      /* text-align: right;
+      align-self: right; */
+      margin-top: 20vh !important;
+    }
+  }
+
+  h2 {
+    font-family: "Open Sans", sans-serif;
     font-weight: normal;
-    /* max-width: 400px; */
-    font-weight: normal;
+    font-size: 1.65rem;
+    font-weight: bold;
     line-height: 150%;
     pointer-events: auto;
     text-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
     /* padding-left: 100px; */
-    margin-top: 40px !important;
     @media (max-width: 800px) {
-      width: 40vw;
+      width: 80vw;
+      font-size: 1.15rem;
+      font-weight: 600;
+    }
+  }
+
+  p {
+    font-family: "Open Sans", sans-serif;
+    font-weight: normal;
+    font-size: 1.25rem;
+    line-height: 150%;
+    pointer-events: auto;
+    text-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    /* padding-left: 100px; */
+    @media (max-width: 800px) {
+      width: 80vw;
+      font-size: 1.15rem;
+      font-weight: 600;
     }
   }
 
   h1,
-  p {
-    margin: 0 30px 0 100px;
+  h2 {
+    /* margin: 0 30px 0 100px; */
 
     @media (max-width: 1024px) {
-      margin: 0 30px;
+      /* margin: 0 30px; */
     }
 
     @media (min-width: 600px) {
       /* padding-top: 250px; */
-      text-align: right;
-      align-self: right;
+      /* text-align: right;
+      align-self: right; */
+      max-width: 500px;
     }
   }
 `;

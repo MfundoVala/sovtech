@@ -5,41 +5,46 @@ import { Link, NavLink } from "react-router-dom";
 const pages = [
   {
     title: "Home",
-    links: [
-      {
-        name: "home",
-        // icon: <FiShoppingBag />,
-      },
-    ],
+    link: "home",
+    // icon: <FiShoppingBag />
   },
   {
     title: "My Work",
-    links: [
-      {
-        name: "mywork",
-        // icon: <FiShoppingBag />,
-      },
-    ],
+    link: "mywork",
+    // icon: <FiShoppingBag />,
   },
 ];
 
 const Nav = styled.div`
   display: flex;
+  align-items: flex-end;
   /* justify-content: space-around; */
   gap: 30px;
   flex-direction: row;
   padding: 0.5rem;
   height: 200px;
+  padding: 40px;
   position: fixed;
   z-index: 999999;
-  width: 100vw;
-  height: 100px;
+  width: 40vw;
+  height: 20px;
   .linkTitle {
-    text-decoration: none;
     text-transform: uppercase;
     margin-left: 5;
-    .span {
-      text-decoration: none;
+    color: white;
+    /* :hover {
+      color: black;
+    } */
+  }
+  .NavButton {
+    background: black;
+    padding: 10px;
+    border: 1px solid black;
+    :hover {
+      background: white;
+      .linkTitle {
+        color: black;
+      }
     }
   }
 `;
@@ -54,22 +59,21 @@ const NavButton = styled.div`
     background-color: rgb(247 247 247);
   }
 `;
+
 const NavBar = () => {
   return (
     <Nav>
       {pages.map((item) => (
-        <div key={item.title}>
-          {item.links.map((link) => (
-            <NavLink
-              to={`/${link.name}`}
-              key={`/${link.name}`}
-              // onClick={handleCloseSideBar}
-            >
-              {link.icon}
-              <span className="linkTitle">{link.name}</span>
-            </NavLink>
-          ))}
-        </div>
+        <NavLink
+          to={`/${item.link}`}
+          key={`/${item.name}`}
+          // onClick={handleCloseSideBar}
+        >
+          <div className="NavButton" key={item.title}>
+            {/* {item.icon} */}
+            <span className="linkTitle">{item.link}</span>
+          </div>
+        </NavLink>
       ))}
     </Nav>
   );

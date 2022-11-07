@@ -8,3 +8,10 @@ body,
   background: white; /* #fedd00; /* #daebe6 */
   color: white;
 }
+a,
+a:hover,
+a:focus,
+a:active {
+  text-decoration: none;
+  color: inherit;
+}

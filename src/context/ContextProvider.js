@@ -4,12 +4,16 @@ const StateContext = createContext();
 
 export const ContextProvider = ({ children }) => {
   const [loading, setLoading] = useState(true);
+  const [activeButton, setActiveButton] = useState("home");
+
   const love = ["love"];
   return (
     <StateContext.Provider
       value={{
         loading,
         setLoading,
+        activeButton,
+        setActiveButton,
         love,
       }}
     >
