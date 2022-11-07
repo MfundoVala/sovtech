@@ -27,6 +27,7 @@ const Nav = styled.div`
   z-index: 999999;
   width: 40vw;
   height: 20px;
+
   .linkTitle {
     text-transform: uppercase;
     margin-left: 5;
